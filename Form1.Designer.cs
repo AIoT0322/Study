@@ -1,5 +1,5 @@
 ﻿
-namespace Puzzle
+namespace board
 {
     partial class Form1
     {
@@ -29,76 +29,72 @@ namespace Puzzle
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.userMessageBoxList = new board.UserMessageBoxList();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.submitbutton = new System.Windows.Forms.Button();
+            this.refreshbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // userMessageBoxList
             // 
-            this.button1.Location = new System.Drawing.Point(140, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "open";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.userMessageBoxList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userMessageBoxList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userMessageBoxList.Location = new System.Drawing.Point(0, 0);
+            this.userMessageBoxList.Name = "userMessageBoxList";
+            this.userMessageBoxList.Size = new System.Drawing.Size(799, 412);
+            this.userMessageBoxList.TabIndex = 0;
             // 
-            // pictureBox1
+            // textBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.textBox.Location = new System.Drawing.Point(0, 411);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(799, 21);
+            this.textBox.TabIndex = 1;
             // 
-            // button2
+            // submitbutton
             // 
-            this.button2.Location = new System.Drawing.Point(362, 566);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "shuffle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.submitbutton.Location = new System.Drawing.Point(724, 432);
+            this.submitbutton.Name = "submitbutton";
+            this.submitbutton.Size = new System.Drawing.Size(75, 23);
+            this.submitbutton.TabIndex = 2;
+            this.submitbutton.Text = "확인";
+            this.submitbutton.UseVisualStyleBackColor = true;
+            this.submitbutton.Click += new System.EventHandler(this.submitbutton_Click);
             // 
-            // pictureBox2
+            // refreshbutton
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(672, 40);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.refreshbutton.Location = new System.Drawing.Point(0, 432);
+            this.refreshbutton.Name = "refreshbutton";
+            this.refreshbutton.Size = new System.Drawing.Size(75, 23);
+            this.refreshbutton.TabIndex = 3;
+            this.refreshbutton.Text = "새로고침";
+            this.refreshbutton.UseVisualStyleBackColor = true;
+            this.refreshbutton.Click += new System.EventHandler(this.refreshbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 689);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.KeyPreview = true;
+            this.ClientSize = new System.Drawing.Size(800, 457);
+            this.Controls.Add(this.refreshbutton);
+            this.Controls.Add(this.submitbutton);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.userMessageBoxList);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private UserMessageBoxList userMessageBoxList;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button submitbutton;
+        private System.Windows.Forms.Button refreshbutton;
     }
 }
 
